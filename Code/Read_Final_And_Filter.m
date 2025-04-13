@@ -12,12 +12,20 @@ figure;
 plot(channels_after, counts_after, 'o-', 'DisplayName', 'Raw Data');
 hold on;
 plot(channels_after, filteredCounts, '-', 'DisplayName', 'Kalman Filtered','LineWidth',2);
-xlabel('Channel #');
-ylabel('Counts');
-title('Comparison of Raw and Kalman Filtered Data');
-legend('show');
+% Label the axes and add a title with increased font sizes
+xlabel('Channel #', 'FontSize', 16);
+ylabel('Counts', 'FontSize', 16);
+title('Comparison of Raw and Kalman Filtered Data', 'FontSize', 18);
+
+% Add a legend with increased font size
+legend('show', 'FontSize', 14);
+
+% Increase the font size of the axes tick labels
+set(gca, 'FontSize', 14);
+
 grid on;
 hold off;
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Function: loadChannelCounts
